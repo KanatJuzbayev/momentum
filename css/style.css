@@ -83,7 +83,7 @@ body {
   outline: 0;
   opacity: .8;
   cursor: pointer;
-  transition: .3s;
+  transition: .05s;
 }
 
 .player-icon:hover,
