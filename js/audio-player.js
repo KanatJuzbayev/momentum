@@ -15,15 +15,11 @@ function playPauseAudio() {
     audio.currentTime = 0;
     audio.play();
     getActveSoundTitle();
-    console.log('playing');
     isPlay = true;
     play.classList.add('pause');
   } else {
     audio.pause();
-    console.log('pause');
-    // const prevActiveSound = document.querySelector('.item-active');
-    // prevActiveSound.classList.toggle('item-active');
-    getActveSoundTitle();
+    removeItemActive();
     isPlay = false;
     play.classList.toggle('pause');
   }
@@ -32,20 +28,20 @@ function playPauseAudio() {
 function playPrevSound() {
   if (isPlay) {
     isPlay = false;
+    removeItemActive();
     soundNum = (soundNum > 0) ? soundNum - 1 : 3;
     playPauseAudio();
     getActveSoundTitle();
-    console.log(soundNum);
   }
 }
 
 function playNextSound() {
   if (isPlay) {
     isPlay = false;
+    removeItemActive();
     soundNum = (soundNum < 3) ? soundNum + 1 : 0;
     playPauseAudio();
     getActveSoundTitle();
-    console.log(soundNum);
   }
 }
 
@@ -63,11 +59,11 @@ playList.forEach(el => {
 });
 
 function getActveSoundTitle() {
-  // const prevActiveSound = document.querySelector('.item-active');
-  // prevActiveSound.classList.toggle('item-active');
   const activeSound = document.querySelector(`li[data-sound="${soundNum}"]`);
   activeSound.classList.add('item-active');
 }
 
-
-console.log(soundNum);
+function removeItemActive() {
+  const prevActiveSound = document.querySelector(`li[data-sound="${soundNum}"]`);
+  prevActiveSound.classList.remove('item-active');
+}

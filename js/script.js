@@ -120,7 +120,6 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lan
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       weatherIcon.className = 'weather-icon owf';
       temperature.textContent = ``;
       weatherDescription.textContent = ``;
