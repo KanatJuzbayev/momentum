@@ -42,7 +42,7 @@ function playNextSound() {
   if (isPlay) {
     isPlay = false;
     removeItemActive();
-    soundNum = (soundNum < 3) ? soundNum + 1 : 0;
+    soundNum = (soundNum < 4) ? soundNum + 1 : 0;
     playPauseAudio();
     getActveSoundTitle();
   }

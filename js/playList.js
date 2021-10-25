@@ -1,13 +1,18 @@
 const playList = [
   {
+    title: 'Anitek - Komorebi',
+    src: 'assets/sounds/Anitek - Komorebi.mp3',
+    duration: '00:30'
+  },
+  {
+    title: 'Audiophysical Shadow',
+    src: 'assets/sounds/Audiophysical Shadow.mp3',
+    duration: '00:30'
+  },
+  {
     title: 'Aqua Caelestis',
     src: 'assets/sounds/Aqua Caelestis.mp3',
     duration: '00:58'
-  },
-  {
-    title: 'Ennio Morricone',
-    src: 'assets/sounds/Ennio Morricone.mp3',
-    duration: '01:37'
   },
   {
     title: 'River Flows In You',
