@@ -103,45 +103,45 @@ function getSlidePrev() {
   setBg();
 }
 
-//weather
-// const weatherIcon = document.querySelector('.weather-icon');
-// const temperature = document.querySelector('.temperature');
-// const weatherDescription = document.querySelector('.weather-description');
-// const wind = document.querySelector('.wind');
-// const humidity = document.querySelector('.humidity');
-// const city = document.querySelector('.city');
-// const weatherError = document.querySelector('.weather-error');
-//
-// async function getWeather() {
-// const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=bf51541e93ccab030e77180d669b93b1&units=metric`;
-//
-//   fetch(url)
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log(data);
-//       weatherIcon.className = 'weather-icon owf';
-//       temperature.textContent = ``;
-//       weatherDescription.textContent = ``;
-//       wind.textContent = ``;
-//       humidity.textContent = ``;
-//       weatherError.textContent = ``;
-//
-//       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-//       temperature.textContent = `${Math.floor(data.main.temp)}°C`;
-//       weatherDescription.textContent = data.weather[0].description;
-//       wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/c`;
-//       humidity.textContent = `Humidity: ${data.main.humidity}%`;
-//     })
-//     .catch(function(error) {
-//       weatherError.textContent = error.message;
-//     });
-//
-// }
-// getWeather();
-//
-// city.addEventListener('change', getWeather);
+weather
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescription = document.querySelector('.weather-description');
+const wind = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
+const city = document.querySelector('.city');
+const weatherError = document.querySelector('.weather-error');
+
+async function getWeather() {
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=bf51541e93ccab030e77180d669b93b1&units=metric`;
+
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      weatherIcon.className = 'weather-icon owf';
+      temperature.textContent = ``;
+      weatherDescription.textContent = ``;
+      wind.textContent = ``;
+      humidity.textContent = ``;
+      weatherError.textContent = ``;
+
+      weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+      temperature.textContent = `${Math.floor(data.main.temp)}°C`;
+      weatherDescription.textContent = data.weather[0].description;
+      wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/c`;
+      humidity.textContent = `Humidity: ${data.main.humidity}%`;
+    })
+    .catch(function(error) {
+      weatherError.textContent = error.message;
+    });
+
+}
+getWeather();
+
+city.addEventListener('change', getWeather);
 
 // Quotes
 const quote = document.querySelector('.quote');

@@ -21,6 +21,8 @@ function playPauseAudio() {
   } else {
     audio.pause();
     console.log('pause');
+    // const prevActiveSound = document.querySelector('.item-active');
+    // prevActiveSound.classList.toggle('item-active');
     getActveSoundTitle();
     isPlay = false;
     play.classList.toggle('pause');
