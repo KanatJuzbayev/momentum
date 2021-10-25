@@ -9,11 +9,14 @@ import playList from './playList.js';
 let isPlay = false;
 let soundNum = 0;
 
+audio.addEventListener("ended", playNextSound);
+
 function playPauseAudio() {
   if (!isPlay) {
     audio.src = playList[soundNum].src;
     audio.currentTime = 0;
     audio.play();
+
     getActveSoundTitle();
     isPlay = true;
     play.classList.add('pause');
