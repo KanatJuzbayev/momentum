@@ -103,7 +103,7 @@ function getSlidePrev() {
   setBg();
 }
 
-weather
+// weather
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
