@@ -86,7 +86,7 @@ function playSoundTitle() {
   // }
   isPlay = false;
   removeItemActive();
-  soundNum = this.dataset.sound;
+  soundNum = parseInt(this.dataset.sound);
   playPauseAudio();
   getActveSoundTitle();
 }
