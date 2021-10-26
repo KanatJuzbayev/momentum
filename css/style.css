@@ -54,6 +54,7 @@ body {
   opacity: .8;
   cursor: pointer;
   transition: .3s;
+  align-items: center;
 }
 
 .play-item:hover {
@@ -61,11 +62,19 @@ body {
 }
 
 .play-item::before {
-  content: "\2713";
+  content: '';
+  height: 13px;
+  width: 13px;
   position: absolute;
   left: 0;
   top: 2px;
   font-weight: 900;
+  background-image: url("../assets/svg/play-icon.svg");
+  margin-top: 5px;
+}
+
+.play-item.item-active::before {
+  background-image: url("../assets/svg/pause-icon.svg");
 }
 
 .item-active {

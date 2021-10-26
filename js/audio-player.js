@@ -78,17 +78,15 @@ const playItems = document.querySelectorAll('.play-item');
 playItems.forEach(item => item.addEventListener('click', playSoundTitle));
 
 function playSoundTitle() {
-  // if (soundNum == this.dataset.sound && isPlay == true) {
-  //   removeItemActive();
-  //   isPlay = true;
-  //   playPauseAudio();
-  //   console.log(isPlay);
-  // }
-  isPlay = false;
-  removeItemActive();
-  soundNum = parseInt(this.dataset.sound);
-  playPauseAudio();
-  getActveSoundTitle();
+  if (soundNum == parseInt(this.dataset.sound) && isPlay == true) {
+    playPauseAudio();
+  } else {
+    isPlay = false;
+    removeItemActive();
+    soundNum = parseInt(this.dataset.sound);
+    playPauseAudio();
+    getActveSoundTitle();
+  }
 }
 
 
