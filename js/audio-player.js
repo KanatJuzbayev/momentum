@@ -12,7 +12,7 @@ let soundNum = 0;
 audio.addEventListener("ended", playNextSound);
 
 function playPauseAudio() {
-  if (!isPlay) {
+  if (isPlay == false) {
     audio.src = playList[soundNum].src;
     audio.currentTime = 0;
     audio.play();
@@ -32,7 +32,7 @@ function playPrevSound() {
   if (isPlay) {
     isPlay = false;
     removeItemActive();
-    soundNum = (soundNum > 0) ? soundNum - 1 : 3;
+    soundNum = (soundNum > 0) ? soundNum - 1 : 4;
     playPauseAudio();
     getActveSoundTitle();
   }
@@ -72,6 +72,26 @@ function removeItemActive() {
   const prevActiveSound = document.querySelector(`li[data-sound="${soundNum}"]`);
   prevActiveSound.classList.remove('item-active');
 }
+
+//Play by Click on sound title
+const playItems = document.querySelectorAll('.play-item');
+playItems.forEach(item => item.addEventListener('click', playSoundTitle));
+
+function playSoundTitle() {
+  // if (soundNum == this.dataset.sound && isPlay == true) {
+  //   removeItemActive();
+  //   isPlay = true;
+  //   playPauseAudio();
+  //   console.log(isPlay);
+  // }
+  isPlay = false;
+  removeItemActive();
+  soundNum = this.dataset.sound;
+  playPauseAudio();
+  getActveSoundTitle();
+}
+
+
 
 
 // Player envolved

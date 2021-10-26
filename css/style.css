@@ -41,7 +41,9 @@ body {
 }
 
 .play-list {
+  position: relative;
   text-align: left;
+  z-index: 2;
 }
 
 .play-item {
@@ -175,6 +177,7 @@ body {
   height: 40vh;
   min-height: 260px;
   padding: 20px;
+  z-index: 1;
 }
 
 .slider-icon {
