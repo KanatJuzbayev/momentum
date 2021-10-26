@@ -6,6 +6,7 @@
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/css/audio-player.css">
   <title>Momentum</title>
 </head>
 <body>
@@ -15,6 +16,30 @@
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
         <button class="play-next player-icon"></button>
+      </div>
+      <div class="audio-player">
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+        <div class="controls">
+
+          <div class="audio-time">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length"></div>
+          </div>
+          <div class="sound-name">Music Song</div>
+          <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
+          <div class="volume-container">
+            <div class="volume-button">
+              <div class="volume icono-volumeMedium"></div>
+            </div>
+
+            <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <ul class="play-list"></ul>
     </div>
