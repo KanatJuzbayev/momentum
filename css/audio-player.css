@@ -106,7 +106,7 @@
   transition: 0.25s;
 }
 .audio-player .controls .volume-container .volume-slider .volume-percentage {
-  background: coral;
+  background: chocolate;
   height: 100%;
   width: 75%;
 }
@@ -117,4 +117,18 @@
 
 .sound-name {
   font-size: 18px;
+}
+
+.icono-volumeMedium {
+  content: "";
+  height: 30px;
+  width: 36px;
+  background-image: url('../assets/svg/volume.svg');
+}
+
+.icono-volumeMute {
+  content: "";
+  height: 30px;
+  width: 36px;
+  background-image: url('../assets/svg/mute.svg');
 }

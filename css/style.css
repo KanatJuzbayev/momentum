@@ -55,6 +55,7 @@ body {
   cursor: pointer;
   transition: .3s;
   align-items: center;
+  width: fit-content;
 }
 
 .play-item:hover {
